@@ -1,0 +1,64 @@
+-- This file has been generated from package.yaml by hpack version 0.20.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: dfe7e119c15371e26538fe46baaecff51b5e26854c21ab9c7d7f96d407f8d639
+
+name:           uhouse-hardware
+version:        0.1.0.0
+description:    Please see the README on Github at <https://github.com/githubuser/uhouse-hardware#readme>
+homepage:       https://github.com/githubuser/uhouse-hardware#readme
+bug-reports:    https://github.com/githubuser/uhouse-hardware/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2018 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+cabal-version:  >= 1.10
+
+extra-source-files:
+    ChangeLog.md
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/uhouse-hardware
+
+library
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , c-storable-deriving
+    , inline-c
+  exposed-modules:
+      Uhouse.Hardware.DHT11
+  other-modules:
+      Paths_uhouse_hardware
+  default-language: Haskell2010
+
+executable uhouse-hardware-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , uhouse-hardware
+  other-modules:
+      Paths_uhouse_hardware
+  default-language: Haskell2010
+
+test-suite uhouse-hardware-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , uhouse-hardware
+  other-modules:
+      Paths_uhouse_hardware
+  default-language: Haskell2010
