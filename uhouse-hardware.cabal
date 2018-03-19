@@ -28,6 +28,7 @@ source-repository head
 library
   hs-source-dirs:
       src
+  c-sources: src/Uhouse/Hardware/common_dht_read.c src/Uhouse/Hardware/myconv.c src/Uhouse/Hardware/pi_dht_read.c src/Uhouse/Hardware/pi_mmio.c
   build-depends:
       base >=4.7 && <5
     , c-storable-deriving
