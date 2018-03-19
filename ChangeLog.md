@@ -1,3 +1,5 @@
-# Changelog for uhouse-hardware
+## Changelog for uhouse-hardware
 
-## Unreleased changes
+## TODO
+ - move c calls to separate file
+ - move helpers to separate file
