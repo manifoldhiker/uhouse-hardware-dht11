@@ -32,12 +32,13 @@ data SensorData = SensorData {
   , humidity    :: Int
 } deriving (Show)
 
-
 data ReadError =
     TimeoutError
   | ChecksumError
   | ArgumentError
-  | GPIOError deriving (Show)
+  | GPIOError
+  | UndefinedError Int
+    deriving (Show)
 
 type Sensor = Int
 type Pin = Int
@@ -66,4 +67,5 @@ parseError -1 = Just TimeoutError
 parseError -2 = Just ChecksumError
 parseError -3 = Just ArgumentError
 parseError -4 = Just GPIOError
-parseError _ = Nothing
+parseError  0 = Nothing
+parseError  i = Just $ UndefinedError i
