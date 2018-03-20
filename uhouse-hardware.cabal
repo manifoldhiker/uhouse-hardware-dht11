@@ -47,6 +47,7 @@ executable uhouse-hardware-exe
   build-depends:
       base >=4.7 && <5
     , uhouse-hardware
+    , datetime
   other-modules:
       Paths_uhouse_hardware
   default-language: Haskell2010
